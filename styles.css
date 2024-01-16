@@ -37,7 +37,7 @@ body {
     -webkit-transform: rotateX(180deg);
     transform: rotateX(180deg);
     position: relative;
-    bottom: -1px;
+    bottom: -5px;
     background-size: 100% 10vh;
 }
 
@@ -483,6 +483,7 @@ label {
 /* --------------------------------- Footer --------------------------------- */
 footer {
     width: 100%;
+    min-height: 40vh;
     background-color: #273814;
     background-image: url('images/sketch/hen2.png'), url('images/sketch/hen1.png');
     background-repeat: no-repeat, no-repeat;
@@ -630,5 +631,9 @@ footer {
 
     #google-map iframe {
         width: 100%;
+    }
+
+    footer {
+        min-height: auto;
     }
 }

@@ -50,20 +50,29 @@ nav.find("a").on("click", function () {
   return false;
 });
 
-$(document).ready(function () {
-  $(".ham").click(function () {
-    $(this).toggleClass("active");
-    var allClasses = $(this.classList);
-    var lastClass = allClasses[allClasses.length - 1];
-    var nav = $("nav");
+// $(document).ready(function () {
+//   $(".ham").click(function () {
+//     $(this).toggleClass("active");
+//     var allClasses = $(this.classList);
+//     var lastClass = allClasses[allClasses.length - 1];
+//     var nav = $("nav");
+//
+//     if (lastClass === "active") {
+//       nav.find("ul").removeClass("hidden");
+//     } else {
+//       nav.find("ul").addClass("hidden");
+//     }
+//   });
+//   // console.log(allClasses);
+//   // console.log(allClasses.length);
+//   // console.log(allClasses[allClasses.length - 1]);
+// });
 
-    if (lastClass === "active") {
-      nav.find("ul").removeClass("hidden");
-    } else {
-      nav.find("ul").addClass("hidden");
-    }
-  });
-  // console.log(allClasses);
-  // console.log(allClasses.length);
-  // console.log(allClasses[allClasses.length - 1]);
+/* ------------------------- Show / hide menu links ------------------------- */
+const menuButton = document.querySelector(".ham");
+const menuLinks = document.querySelector(".nav-bar");
+
+menuButton.addEventListener("click", () => {
+  menuButton.classList.toggle("active");
+  menuLinks.classList.toggle("hidden");
 });
